@@ -1,7 +1,7 @@
 .container {
   width: 100%;
   max-width: clamp(320px, 90vw, 1200px); /* адаптивная ширина */
-  margin-inline: auto;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {

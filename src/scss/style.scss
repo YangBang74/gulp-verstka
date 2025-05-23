@@ -2,6 +2,7 @@
 @import "fonts";
 @import "variables";
 @import "media-queries";
+@import '/swiper/swiper-bundle.min.css';
 
 body {
   font-family: var(--font-family-base);
@@ -11,7 +12,6 @@ body {
 }
 
 .header {
-  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
@@ -64,4 +64,49 @@ body {
 }
 .header__item-sub.sub--last {
   bottom: -50px;
+}
+.header__bottom {
+  width: 100%;
+  position: fixed;
+}
+
+.header__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-white);
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: 2.0625rem;
+  padding: 1.0625rem 0;
+  &__link {
+    padding: 0.625rem 0;
+    font-size: 1.125rem;
+  }
+}
+
+.header__card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 0.625rem 0;
+  &-icon {
+    position: relative;
+  }
+  &-count {
+    position: absolute;
+    top: -7px;
+    right: -10px;
+    width: 1.125rem;
+    align-self: center;
+    height: 1.125rem;
+    color: var(--color-white);
+    font-weight: 900;
+    font-size: 0.75rem;
+    background-color: var(--color-secondary);
+    border-radius: 50%;    
+  }
 }

@@ -14,13 +14,16 @@ const paths = {
   html: 'src/*.html',
   scss: 'src/scss/**/*.scss',
   js: 'src/js/**/*.js',
-  images: 'src/images/**/*',
+  images: 'src/images/**/*.{jpg,jpeg,png,svg,gif,webp}',
+  fonts: 'src/fonts/**/*.{woff,woff2,ttf,otf}',
   dist: 'dist'
 };
 
 // HTML
 function html() {
-  return src(paths.html).pipe(dest(paths.dist)).pipe(browserSync.stream());
+  return src(paths.html)
+    .pipe(dest(paths.dist))
+    .pipe(browserSync.stream());
 }
 
 // SCSS
@@ -50,8 +53,15 @@ function scripts() {
 
 // Images
 function images() {
-  return src(paths.images)
+  return src(paths.images, { encoding: false })
     .pipe(dest(paths.dist + '/images'))
+    .pipe(browserSync.stream());
+}
+
+// Fonts
+function fonts() {
+  return src(paths.fonts, { encoding: false })
+    .pipe(dest(paths.dist + '/fonts'))
     .pipe(browserSync.stream());
 }
 
@@ -74,15 +84,12 @@ function serve() {
   watch(paths.scss, styles);
   watch(paths.js, scripts);
   watch(paths.images, images);
+  watch(paths.fonts, fonts);
 }
-
-function fonts() {
-  return src('src/fonts/**/*')
-    .pipe(dest('dist/fonts'))
-    .pipe(browserSync.stream());
-}
-
 
 // Экспорт задач
-exports.format = format;
-exports.default = series(format, parallel(html, styles, scripts, images, fonts), serve);
+exports.default = series(
+  format,
+  parallel(html, styles, scripts, images, fonts),
+  serve
+);
