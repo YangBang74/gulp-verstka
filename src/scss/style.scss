@@ -1,8 +1,7 @@
-@import "normalize";
-@import "fonts";
-@import "variables";
-@import "media-queries";
-@import '/swiper/swiper-bundle.min.css';
+@use "normalize";
+@use "fonts";
+@use "variables";
+@use "media-queries";
 
 body {
   font-family: var(--font-family-base);
