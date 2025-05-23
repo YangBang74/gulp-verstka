@@ -53,6 +53,14 @@ function scripts() {
     .pipe(browserSync.stream());
 }
 
+const images = () => {
+  return src('src/img/**/*')
+    .pipe(dest('dist/img'))
+    .pipe(browserSync.stream());
+};
+
+
+
 // Watch
 function serve() {
   browserSync.init({
@@ -70,6 +78,7 @@ function serve() {
 // Экспорт задач
 exports.html = html;
 exports.styles = styles;
+exports.images = images;
 exports.scripts = scripts;
-exports.serve = series(parallel(html, styles, scripts), serve);
-exports.default = exports.serve;
+exports.default = series(parallel(html, styles, scripts, images), serve);
+

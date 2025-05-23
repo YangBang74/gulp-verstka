@@ -30,6 +30,10 @@ h6 {
   font-weight: inherit;
 }
 
+button, a {
+  cursor: pointer;
+}
+
 /* Убираем стандартное оформление кнопок */
 button,
 input,
