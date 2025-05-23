@@ -9,7 +9,7 @@ const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
 const prettier = require('gulp-prettier').default;
 
-// пути
+// Пути
 const paths = {
   html: 'src/*.html',
   scss: 'src/scss/**/*.scss',
