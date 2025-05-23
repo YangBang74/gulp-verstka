@@ -1,0 +1,93 @@
+/* Box sizing и удаление отступов у всех элементов */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Удаляем стандартные стили списков */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Удаляем подчеркивания и цвета у ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Удаляем стили заголовков */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Убираем стандартное оформление кнопок */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* Убираем курсив у address и других */
+address,
+cite,
+em,
+i {
+  font-style: normal;
+}
+
+/* Удаляем стандартный стиль таблиц */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Удаляем обводки у изображений */
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Задаем базовый стиль для body */
+body {
+  font-family: sans-serif;
+  background: #fff;
+  color: #000;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Формы без автозаполнения жёлтым */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Теги HTML5 по умолчанию как блочные */
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main,
+figure,
+figcaption {
+  display: block;
+}

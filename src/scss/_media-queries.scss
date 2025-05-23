@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  max-width: clamp(320px, 90vw, 1200px); /* адаптивная ширина */
+  margin-inline: auto;
+}
+
+@media (max-width: 768px) {
+  .header__top-logo svg {
+    width: 110px;
+  }
+  .header__top .header__top-contacts {
+    justify-items: flex-end;
+    text-align: right;
+    justify-content: end;
+  }
+  .header__top-item > span {
+    display: none;
+  }
+  .header__top-item svg {
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 50%;
+    padding: 5px;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
+  .header__top-item:hover .header__item-sub {
+    opacity: 1;
+  }
+}
