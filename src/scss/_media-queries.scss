@@ -22,6 +22,21 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .benefits__body {
+    flex-wrap: wrap;
+  }
+  .benefits__body .benefits__card {
+    width: 45%;
+  }
+  .rations .rations__card {
+    width: 45%;
+  }
+  .about .about__body {
+    align-items: start;
+  }
+}
+
 
 @media (max-width: 768px) {
   .swiper .swiper-wrapper .swiper-button-next {
@@ -51,5 +66,38 @@
   }
   .header__top-item:hover .header__item-sub {
     opacity: 1;
+  }
+  .rations .rations__card {
+    width: 100%;
+  }
+  .about .about__body {
+    flex-direction: column-reverse;
+  }
+  .about .about__img {
+    width: 100%;
+  }
+  .delivery__body {
+    flex-direction: column;
+  }
+  .delivery .delivery__img {
+    border-radius: 0 0 14px 14px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 660px) {
+  .benefits .benefits__body {
+    // justify-items: center;
+    justify-content: center;
+  }
+  .benefits__body .benefits__card {
+    width: 80%;
+  }
+  .hero .hero__body .container {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .delivery .delivery__item {
+    padding: 40px;
   }
 }
