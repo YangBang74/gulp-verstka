@@ -10,11 +10,14 @@ body {
   margin: 0;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .header {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 1000;
   background-color: var(--color-white);
 }
 
@@ -65,9 +68,17 @@ body {
   bottom: -50px;
 }
 .header__bottom {
-  width: 100%;
-  top: 0;
   position: sticky;
+  top: 0;      
+  z-index: 1000;
+  background: #fff;   
+  transition: 0.2s;
+}
+
+.header__bottom.fixed {
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .header__body {
@@ -77,15 +88,26 @@ body {
   background-color: var(--color-white);
 }
 
+.menu__close{
+  display: none;
+}
 .header__menu {
   display: flex;
   align-items: center;
   gap: 2.0625rem;
   padding: 1.0625rem 0;
-  &__link {
+  &-link {
     padding: 0.625rem 0;
     font-size: 1.125rem;
   }
+  &-link:hover {
+    color: var(--color-gray-light);
+  }
+}
+
+.swiper .swiper-wrapper .swiper-slide {
+  z-index: -1;
+  position: relative;
 }
 
 .header__burger {
@@ -164,6 +186,9 @@ body {
     border-radius: var(--border-radius);
     font-weight: 700;
   }  
+  &-button:hover {
+    background-color: var(--color-secondary-dark);
+  }
 }
 .swiper .swiper-button-next,.swiper  .swiper-button-prev {
   color: #fff;
@@ -271,6 +296,9 @@ body {
       border-radius: var(--border-radius);
       padding: 0.5rem 2.3125rem;
     }
+    &-button:hover {
+      background-color: var(--color-secondary-dark);
+    }
   }
 }
 
@@ -317,6 +345,9 @@ body {
       font-weight: 700;
       border-radius: var(--border-radius);
     }
+    &-button:hover {
+      background-color: var(--color-secondary-dark);
+    }
   }
 }
 
@@ -341,19 +372,24 @@ body {
     flex-wrap: wrap;
   }
   &__body-logo {
-    width: 10%;
+    width: 150px;
   }
   &__body-nav {
     width: 75%;
   }
   &__nav-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
   }
   &__nav-link {
     display: flex;
     flex-direction: column;
+    white-space: nowrap;
     line-height: 2.25rem;
+  }
+  &__nav-link:hover {
+    color: var(--colore-gray-light);
   }
   &__items-body {
     padding: 1.375rem 0;
@@ -423,6 +459,9 @@ body {
     font-weight: 700;
     margin: 30px auto;
   }
+  &__body-button:hover {
+      background-color: var(--color-secondary-dark);
+    }
   &__sub {
     text-align: center;
     a {
@@ -476,3 +515,4 @@ body {
     margin-top: 1rem;
   }
 }
+

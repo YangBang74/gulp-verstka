@@ -65,6 +65,12 @@
               <a href="#" class="header__menu-link">Бизнес-ланч</a>
               <a href="#" class="header__menu-link">Детокс</a>
               <a href="#" class="header__menu-link">Рационы</a>
+              <button type="button" class="menu__close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
             </nav>
             <button type="button" class="header__card">
             <div class="header__card-icon">
@@ -265,7 +271,7 @@
               Fermentum justo nam nibh vitae pellentesque integer. Imperdiet habitant tortor est amet tortor viverra. 
               </p>
             </div>
-            <button type="button" class="delivery__item-button" onclick="toggleSend()">
+            <button type="button" class="delivery__item-button">
               Связаться с нами
             </button>
           </div>          
@@ -286,7 +292,7 @@
             <p>Нажимая на кнопку, вы соглашаетесь на обработку</p>
             <a href="#">персональных данных</a>
           </div>
-          <button type="button" class="sub__close" onclick="closeSendMenu()">
+          <button type="button" class="sub__close">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -375,6 +381,6 @@
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
   />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="js/main.min.js"></script>
+  <script src="js/main.min.js" type="module"></script>
 </body>
 </html>
