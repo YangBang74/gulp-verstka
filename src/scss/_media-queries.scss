@@ -86,8 +86,17 @@
 }
 
 @media (max-width: 660px) {
+  .header__menu {
+    position: fixed;
+    flex-direction: column;
+    background-color: var(--color-white);
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    display: flex;
+    height: 100vh;
+  }
   .benefits .benefits__body {
-    // justify-items: center;
     justify-content: center;
   }
   .benefits__body .benefits__card {

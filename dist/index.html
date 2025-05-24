@@ -55,6 +55,11 @@
       <div class="header__bottom">
         <div class="container">
           <div class="header__body">
+            <button type="button" class="header__burger">
+              <span class="header__burger-line"></span>
+              <span class="header__burger-line"></span>
+              <span class="header__burger-line"></span>
+            </button>
             <nav class="header__menu">
               <a href="#" class="header__menu-link">Меню ресторана</a>
               <a href="#" class="header__menu-link">Бизнес-ланч</a>
@@ -268,7 +273,7 @@
         </div>
       </div>
       <article class="sub">        
-        <form class="sub__body">
+        <form class="sub__body" id="contactForm">
           <h1 class="sub__title">Форма обратной связи</h1>
           <div class="sub__inputs">
             <label for="name" title="Напишите ваше имя">Ваше имя <span class="title">*</span></label><br/>
@@ -290,9 +295,23 @@
         </form>
         
       </article>
+      <!-- Модальное окно -->
+      <article id="successModal" class="succes">
+        <div class="modal-content">
+          <h1 class="sub__title">Форма обратной связи</h1>
+          <p>Ваша заявка успешно отправлена.</p>
+          <button type="button" class="sub__body-button closeModal">Закрыть</button>
+          <button type="button" class="sub__close closeModal" >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </article>
+
     </section>
   </main>
-
   <footer class="footer">
     <div class="footer__top">
       <div class="container">
